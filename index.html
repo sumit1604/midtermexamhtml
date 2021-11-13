@@ -66,6 +66,19 @@ a {
   text-align: center;
 }
 </style>
+<script type="text/javascript">
+
+  function validationForm(){
+       var user =document.getElementById('user').value;
+
+       if(user ==""){
+
+         document.getElementById('username').innerHTML ="Please fill in the information!";
+         return false;
+       }
+  }
+
+</script>
 </head>
 <body>
 
@@ -113,17 +126,6 @@ a {
 </form>
 
 
-<script type="text/javascript">
-  function validationForm(){
-       var user =document.getElementById('user').value;
 
-       if(user ==""){
-
-         document.getElementById('username').innerHTML = "Please fill in the information!";
-         return false;
-       }
-  }
-
-</script>
 </body>
 </html>
