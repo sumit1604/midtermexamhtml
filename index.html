@@ -66,19 +66,7 @@ a {
   text-align: center;
 }
 </style>
-<script type="text/javascript">
 
-  function validationForm(){
-       var user =document.getElementById('user').value;
-
-       if(user ==""){
-
-         document.getElementById('username').innerHTML ="Please fill in the information!";
-         return false;
-       }
-  }
-
-</script>
 </head>
 <body>
 
@@ -123,9 +111,20 @@ a {
     <div class="signin">
     <p>Already have an account? <a href="#">Sign in</a>.</p>
    </div>
+   <script type="text/javascript">
+
+     function validationForm(){
+          var user =document.getElementById('user').value;
+
+          if(user ==""){
+
+            document.getElementById('username').innerHTML ="Error!";
+            return false;
+          }
+     }
+
+   </script>
 </form>
-
-
 
 </body>
 </html>
