@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -70,24 +71,24 @@ a {
 </head>
 <body>
 
-<form action="/action_page.php" name="myForm">
+<form action="/action_page.php" name="myForm" onsubmit="return validateForm()">
   <div class="container">
     <h1 style ="margin: auto;width: 30%;padding: 10px;">Registration Form</h1>
     <p style ="margin: auto;width: 30%;padding: 0px;">Please fill in this form to create an account.</p>
     <hr>
 
     <label for="UserName"><b>User Name:</b></label>
-    <input type="text" placeholder="Enter your full name" name="user" id="user" required>
+    <input type="text" placeholder="Enter your full name" name="user" id="userID" >
     <span id="username" class="text-danger font-weight-bold>Please Enter your Full name!</span>
 
     <label for="address"><b>Adress:</b></label>
     <input type="text" placeholder="Enter your address" name="address" id="addressID" required>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter your Email" name="email" id="email" required>
+    <input type="text" placeholder="Enter your Email" name="email" id="emailID" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter your Password" name="psw" id="psw" required>
+    <input type="password" placeholder="Enter your Password" name="psw" id="pswID" required>
 
     <label for="telephone"><b>Telephone</b></label>
     <input type="text" placeholder="Enter your contact number" name="telephone" id="telephoneID" required>
@@ -114,13 +115,39 @@ a {
 
    <script type="text/javascript">
 
-  function validateForm() {
-  let x = document.forms["myForm"]["user"].value;
-  if (x == "") {
+   function validateForm() {
+   let x = document.forms["myForm"]["userID"].value;
+   let y = document.forms["myForm"]["addressID"].value;
+   let z = document.forms["myForm"]["emailID"].value;
+   let a = document.forms["myForm"]["pswID"].value;
+   let b = document.forms["myForm"]["telephoneID"].value;
+
+   if (x == "") {
     alert("Name must be filled out");
     return false;
-  }
+   }
+ }
+ if (y == "") {
+  alert("Adress must be filled out");
+  return false;
+ }
 }
+if (z == "") {
+ alert("E-mail ID must be filled out");
+ return false;
+}
+}
+if (a == "") {
+ alert("Password must be filled out");
+ return false;
+}
+}
+if (b == "") {
+ alert("Telephone must be filled out");
+ return false;
+}
+}
+
 
    </script>
 </form>
