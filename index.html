@@ -146,6 +146,16 @@ a {
  alert("Telephone must be filled out");
  return false;
 }
+
+if(emailID.indexOf('@') >=0){
+  alert("Please enter correct e-mail address!");
+  return false;
+}
+
+if(emailID.charsAt(emailID.length-4)!='.'){
+  alert("Please enter correct e-mail address!");
+  return false;"
+}
 }
 
 
