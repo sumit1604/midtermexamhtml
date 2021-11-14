@@ -116,7 +116,7 @@ a {
    <script type="text/javascript">
 
    function validateForm() {
-   let x = document.forms["myForm"]["user"].value;
+   let x = document.forms["myForm"]["userID"].value;
    let y = document.forms["myForm"]["addressID"].value;
    let z = document.forms["myForm"]["emailID"].value;
    let a = document.forms["myForm"]["pswID"].value;
@@ -126,23 +126,23 @@ a {
     alert("Name must be filled out");
     return false;
    }
- }
- if (y == "") {
+
+   if (y == "") {
   alert("Adress must be filled out");
   return false;
- }
-}
-if (z == "") {
+   }
+
+   if (z == "") {
  alert("E-mail ID must be filled out");
  return false;
-}
-}
-if (a == "") {
+  }
+
+  if (a == "") {
  alert("Password must be filled out");
  return false;
-}
-}
-if (b == "") {
+ }
+
+ if (b == "") {
  alert("Telephone must be filled out");
  return false;
 }
