@@ -158,6 +158,16 @@ if(emailID.charsAt(emailID.length-4)!='.'){
 }
 }
 
+function phoneValidation(){
+  let x = document.forms["myForm"]["telephoneID"].value;
+
+  var regx = ^\+?\d.\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$;
+
+  if(regx.test(telephoneID)){
+    alert("Please enter correct format for phone number!");
+    return false;"
+  }
+}
 
    </script>
 </form>
